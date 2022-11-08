@@ -1,25 +1,39 @@
 import logo from './logo.svg';
 import './App.css';
+import Nav from './Nav'
+import Base from './Base'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+import React, { Component } from 'react'
+
+export default class App extends Component {
+
+  constructor(){ 
+ super();
+  this.game = {
+    user: null,
+    chickens:{
+      1: 'betsy',
+      2: 'Germy'
+    },
+    name: 'Kamaree',
+  }
+  }
+
+  render() {
+
+
+
+
+    return (
+      <div>
+        <Nav></Nav>
+        <h1>First Reaction to React!</h1>
+        <h2>Let's try using a different function and calling it!</h2>
+        <Base></Base>
+      </div>
+      
+
+    )
+  }
 }
-
-export default App;
